@@ -1,0 +1,11 @@
+1.
+.quote-container#quote-container
+ <div class="quote-container" id="quote-container">
+
+2.
+i.fas.fa-quote-left
+<i class="fas fa-quote-left"></i>
+
+3.
+button.twitter-button#twitter
+<button class="twitter-button" id="twittee"></button>
