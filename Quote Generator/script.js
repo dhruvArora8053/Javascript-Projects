@@ -5,11 +5,25 @@ const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
+const loader = document.getElementById("loader");
 
 let apiQuotes = [];
 
+// Show loading
+function loading() {
+  loader.hidden = false;
+  quoteContainer.hidden = true;
+}
+
+// Hide loading
+function complete() {
+  quoteContainer.hidden = false;
+  loader.hidden = true;
+}
+
 // Show new Quote
 function newQuote(quotes) {
+  loading();
   const randomNumber = function (last) {
     return Math.floor(Math.random() * last);
   };
@@ -27,10 +41,14 @@ function newQuote(quotes) {
   }
 
   authorText.textContent = author.slice(0, author.indexOf(","));
+
+  //   Set quote, hide loader
   quoteText.textContent = quote;
+  complete();
 }
 
 async function getQuotes() {
+  loading();
   const apiURL = "https://type.fit/api/quotes";
   try {
     const response = await fetch(apiURL);
