@@ -1,1 +1,8 @@
+1.
 title= 'Tweet this' --> attribute give you a little bit of explaination
+
+2.
+<div class="loader" id="loader" hidden>
+    <img src="loader.svg" alt="Loading" />
+</div>
+hidden --> it makes the element hidden

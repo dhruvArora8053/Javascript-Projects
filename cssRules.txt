@@ -1,3 +1,13 @@
 button:hover {
   filter: brightness(110%);
 }
+
+2.
+body{
+background: whitesmoke; //light white 
+} 
+
+3.
+.loader {
+  position: fixed; //we don't even want it to move even the user scrolls
+}
