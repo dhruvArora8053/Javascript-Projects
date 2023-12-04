@@ -1,0 +1,3 @@
+const count = 10;
+const apiKey = "Z5Y2tbRb6C2Ll-WK4g-kV8QZ8KldG39L4kfstW4TFf8";
+const apiUrl =`https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}`;
